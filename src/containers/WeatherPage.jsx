@@ -1,11 +1,11 @@
-import "./Home.scss";
+import "./WeatherPage.scss";
 import sunrise from "../assets/images/morning-icon.svg"
 import sun from "../assets/images/lights-sunlight-svgrepo-com.svg"
 import moon from "../assets/images/moon-night-svgrepo-com.svg"
 import { useEffect, useState } from "react";
 
 
-const Home = () => {
+const WeatherPage = () => {
     const [userLocation, setUserLocation] = useState({
         latitude:0,
         longitude:0
@@ -112,4 +112,4 @@ return (
 )
 }
 
-export default Home
+export default WeatherPage
