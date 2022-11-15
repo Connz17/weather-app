@@ -1,0 +1,78 @@
+
+.landing-page {
+  background-color: rgba(116, 207, 235, 0.66);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  &__content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__profile {
+    width: 17rem;
+    height: auto;
+  }
+
+  
+  &__title {
+    color: white;
+    font-size: 2rem;
+  }
+
+  &__form {
+    display: grid;
+    font-size: 1.5rem;
+    color: white;
+    justify-items: center;
+  }
+
+  &__input {
+    margin: 0.625rem 0;
+    padding: 0.625rem;
+    font-size: 1.5rem;
+    border-radius: 15px;
+    border: 5px solid grey;
+    color: black;
+
+    &:focus {
+      outline: none;
+      border: 5px solid blue;
+    }
+  }
+
+  &__button {
+    padding: 0.3rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &:hover{
+        background-color: lightblue;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .landing-page {
+    background-color: rgba(116, 207, 235, 0.66);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__content {
+      position: relative;
+      background-color: black;
+      width: 40%;
+      height: 80%;
+      border-radius: 15px;
+    }
+
+  }
+}
