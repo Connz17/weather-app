@@ -1,5 +1,7 @@
 import "./SportPage.scss";
 import { useEffect, useState } from "react";
+import FootballCard from "../../components/FootballCard/FootballCard";
+import Nav from "../../components/Nav/Nav";
 
 
 const SportPage = ({userLocation, userName, errorMessage, apiKey}) => {
@@ -10,8 +12,8 @@ const SportPage = ({userLocation, userName, errorMessage, apiKey}) => {
     const getSportsData = async () => {
         const res = await fetch(`http://api.weatherapi.com/v1/sports.json?key=${apiKey}&q=${userLocation.latitude},${userLocation.longitude}&aqi=no`);
         const data = await res.json();
-        console.log(data);
-        setSportData(data.football)
+        console.log(data.football);
+        setSportData(data.football);
         console.log(sportData); 
         };
     
@@ -19,10 +21,10 @@ const SportPage = ({userLocation, userName, errorMessage, apiKey}) => {
             getSportsData();
         },[])
 
-        const footballJSX = sportData.map((match, index) =>{
+        const footballJSX = sportData.map((game, index) =>{
             return(
                 <div key={index}>
-                    
+                    <FootballCard stadium={game.stadium} tournament={game.tournament} start={game.start} match={game.match}/>
                 </div>
             )
             })
@@ -30,7 +32,13 @@ const SportPage = ({userLocation, userName, errorMessage, apiKey}) => {
 
 
   return (
-    <div>SportPage</div>
+    <>
+    <Nav/>
+    <h2>{userName} here is today's sport</h2>
+    <div>
+        {footballJSX}
+    </div> 
+    </>
   )
 }
 

@@ -1,0 +1,21 @@
+.navigation-bar{
+    height: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.5rem;
+    background: rgba(0,0,0,1);
+    
+
+    &__box{
+        width:9rem;
+        height: auto;
+
+
+    }
+
+    &__title{
+        color: blue;
+    }
+
+}

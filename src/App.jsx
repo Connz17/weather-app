@@ -4,6 +4,7 @@ import LandingPage from './containers/LandingPage/LandingPage';
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import SportPage from './containers/SportPage/SportPage';
+import ForecastPage from './containers/ForecastPage/ForecastPage';
 
 function App() {
   const [user, setUser] = useState({
@@ -71,7 +72,10 @@ const apiKey = "944306eef47343d792e142554220911";
           <Route path="/weather"
             element={<WeatherPage userLocation={userLocation} userName={`${user.firstName} ${user.lastName}`} errorMessage={errorMessage} apiKey={apiKey}/>}>
           </Route>
-          <Route path="/sports"
+          <Route path="/forecast"
+            element={<ForecastPage userLocation={userLocation} userName={`${user.firstName} ${user.lastName}`} errorMessage={errorMessage} apiKey={apiKey}/>}>
+          </Route>
+          <Route path="/sport"
           element={<SportPage userLocation={userLocation} userName={`${user.firstName} ${user.lastName}`} apiKey={apiKey}/>}>
           </Route>
           <Route path="/"

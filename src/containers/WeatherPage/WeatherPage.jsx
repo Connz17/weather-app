@@ -3,6 +3,7 @@ import sunrise from "../../assets/images/morning-icon.svg"
 import sun from "../../assets/images/lights-sunlight-svgrepo-com.svg"
 import moon from "../../assets/images/moon-night-svgrepo-com.svg"
 import { useEffect, useState } from "react";
+import Nav from "../../components/Nav/Nav";
 
 
 const WeatherPage = ({userLocation, userName, errorMessage, apiKey}) => {
@@ -61,6 +62,7 @@ const WeatherPage = ({userLocation, userName, errorMessage, apiKey}) => {
 
 return (
     <>
+    <Nav/>
     <div>
         <img className="greeting__image" src={greetingImg} alt={greetingTime} />
         <h1>Good {greetingTime}</h1>
