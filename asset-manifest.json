@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/weather-app/static/css/main.f98b0204.css",
+    "main.css": "/weather-app/static/css/main.98708a4f.css",
     "main.js": "/weather-app/static/js/main.b652603c.js",
     "static/js/787.d9312eb8.chunk.js": "/weather-app/static/js/787.d9312eb8.chunk.js",
     "static/media/moon-night-svgrepo-com.svg": "/weather-app/static/media/moon-night-svgrepo-com.c8f43767873a6d9b202089c0cd71f8b2.svg",
@@ -8,12 +8,12 @@
     "static/media/morning-icon.svg": "/weather-app/static/media/morning-icon.0504f52fb2c38a042d23c3f2bb6f47bd.svg",
     "static/media/Circle-icons-profile.svg": "/weather-app/static/media/Circle-icons-profile.a34abeb82583048be2b2a4eaef897e8f.svg",
     "index.html": "/weather-app/index.html",
-    "main.f98b0204.css.map": "/weather-app/static/css/main.f98b0204.css.map",
+    "main.98708a4f.css.map": "/weather-app/static/css/main.98708a4f.css.map",
     "main.b652603c.js.map": "/weather-app/static/js/main.b652603c.js.map",
     "787.d9312eb8.chunk.js.map": "/weather-app/static/js/787.d9312eb8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f98b0204.css",
+    "static/css/main.98708a4f.css",
     "static/js/main.b652603c.js"
   ]
 }
