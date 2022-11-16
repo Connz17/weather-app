@@ -43,7 +43,8 @@ const ForecastPage = ({userLocation, userName, errorMessage, apiKey}) => {
         <input type="radio" name="forecast_range" id="five" value={5} onClick={getForecastValue}/>
         <label htmlFor="seven">7</label>
         <input type="radio" name="forecast_range" id="seven" value={7} onClick={getForecastValue}/>
-    </div>
+    </div> <br />
+    <h3>{userName} your forecast for the following {forecastRange} days</h3> <br />
     <div className="card-container">
         {forecastJSX}
     </div>
