@@ -16,7 +16,6 @@ function App() {
     latitude:"",
     longitude:""
 })
-  const [errorMessage , setErrorMessage] = useState("")
 
   useEffect(() => {
     getLocation();
@@ -46,21 +45,20 @@ function App() {
     (error) => {
     switch (error.code) {
         case error.PERMISSION_DENIED:
-            setErrorMessage("User denied the request for Geolocation.");
+            alert("User denied the request for Geolocation.");
             break;
         case error.POSITION_UNAVAILABLE:
-            setErrorMessage("Location information is unavailable.");
+            alert("Location information is unavailable.");
             break;
         case error.error.TIMEOUT:
-            setErrorMessage("User denied the request for Geolocation.");
+            alert("User denied the request for Geolocation.");
             break;
         case error.error.UNKNOWN_ERROR:
-            setErrorMessage("An unknown error occurred.");
+            alert("An unknown error occurred.");
             break;
         default:
-            setErrorMessage("There is an error");
+            alert("There is an error");
     }
-    console.log(errorMessage);
     });
 } 
 const apiKey = "944306eef47343d792e142554220911";
@@ -70,10 +68,10 @@ const apiKey = "944306eef47343d792e142554220911";
       <div className="App">
         <Routes>
           <Route path="/weather"
-            element={<WeatherPage userLocation={userLocation} userName={`${user.firstName} ${user.lastName}`} errorMessage={errorMessage} apiKey={apiKey}/>}>
+            element={<WeatherPage userLocation={userLocation} userName={`${user.firstName} ${user.lastName}`} apiKey={apiKey}/>}>
           </Route>
           <Route path="/forecast"
-            element={<ForecastPage userLocation={userLocation} userName={`${user.firstName} ${user.lastName}`} errorMessage={errorMessage} apiKey={apiKey}/>}>
+            element={<ForecastPage userLocation={userLocation} userName={`${user.firstName} ${user.lastName}`} apiKey={apiKey}/>}>
           </Route>
           <Route path="/sport"
           element={<SportPage userLocation={userLocation} userName={`${user.firstName} ${user.lastName}`} apiKey={apiKey}/>}>

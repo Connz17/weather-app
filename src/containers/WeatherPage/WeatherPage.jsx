@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import Nav from "../../components/Nav/Nav";
 
 
-const WeatherPage = ({userLocation, userName, errorMessage, apiKey}) => {
+const WeatherPage = ({userLocation, userName, apiKey}) => {
 
     const [weatherData, setWeatherData] = useState({
         location:{
@@ -76,7 +76,6 @@ return (
         <h3>Current weather is {weatherData.current.condition.text}</h3>
         <h3>Actual temperature {weatherData.current.temp_c}&deg;C</h3>
         <h3>Feels like {weatherData.current.feelslike_c}&deg;C</h3>
-        <h3>{errorMessage}</h3>
     </div>
     </>
 )

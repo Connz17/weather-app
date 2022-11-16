@@ -4,7 +4,7 @@ import WeatherCard from "../../components/WeatherCard/WeatherCard";
 import "./ForecastPage.scss";
 
 
-const ForecastPage = ({userLocation, userName, errorMessage, apiKey}) => {
+const ForecastPage = ({userLocation, userName, apiKey}) => {
 
     const [forecastData, setForecastData] = useState([])
     const [forecastRange, setForecastRange] = useState("3")
