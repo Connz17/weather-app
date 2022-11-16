@@ -1,0 +1,60 @@
+
+
+.weather-card{
+    flex-wrap: wrap;
+    width: 20rem;
+    height: 30rem;
+    border-radius: 5px;
+    background-color: rgba(0, 255, 255, 0.345);
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: 
+    "d d d d d"
+    "ht ht avg i i"
+    "lt lt ct i i"
+    "am am . pm pm"
+    "at at . pt pt";
+
+    &__date{
+        grid-area: d;
+    }
+
+    &__h-temp{
+        grid-area: ht;
+    }
+
+    &__l-temp{
+        grid-area: lt;
+    }
+
+    &__a-temp{
+        grid-area: avg;
+    }
+
+    &__am-temp{
+        grid-area:am;
+    }
+
+    &__pm-temp{
+        grid-area: pm;
+    }
+
+    &__weather{
+        grid-area: ct;
+    }
+
+    &__am-weather{
+        grid-area: at;
+    }
+
+    &__pm-weather{
+        grid-area: pt;
+    }
+
+    &__img{
+        grid-area: i;
+    }
+}

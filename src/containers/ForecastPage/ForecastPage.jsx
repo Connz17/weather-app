@@ -28,7 +28,7 @@ const ForecastPage = ({userLocation, userName, errorMessage, apiKey}) => {
         const forecastJSX = forecastData.map((forecast, index) =>{
             return(
                 <div key={index}>
-                    <WeatherCard day={forecast.date} highTemp={forecast.day.maxtemp_c} lowTemp={forecast.day.mintemp_c} weather={forecast.day.condition.text} icon={forecast.day.condition.icon} amTemp={forecast.hour[10].temp_c} pmTemp={forecast.hour[17].temp_c} amWeather={forecast.hour[10].condition.text} pmWeather={forecast.hour[17].condition.text}/>
+                    <WeatherCard day={forecast.date} avgTemp={forecast.day.avgtemp_c} highTemp={forecast.day.maxtemp_c} lowTemp={forecast.day.mintemp_c} weather={forecast.day.condition.text} icon={forecast.day.condition.icon} amTemp={forecast.hour[10].temp_c} pmTemp={forecast.hour[17].temp_c} amWeather={forecast.hour[10].condition.text} pmWeather={forecast.hour[17].condition.text}/>
                 </div>
             )
         })
@@ -44,7 +44,7 @@ const ForecastPage = ({userLocation, userName, errorMessage, apiKey}) => {
         <label htmlFor="seven">7</label>
         <input type="radio" name="forecast_range" id="seven" value={7} onClick={getForecastValue}/>
     </div>
-    <div>
+    <div className="card-container">
         {forecastJSX}
     </div>
     </>

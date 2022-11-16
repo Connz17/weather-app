@@ -4,6 +4,11 @@ import { Link } from "react-router-dom";
 const Nav = () => {
   return (
     <div className="navigation-bar">
+        <Link style={{ textDecoration: "none" }} to="/">
+        <div className="navigation-bar__box">
+          <h3 className="navigation-bar__title">Home</h3>
+        </div>
+      </Link>
       <Link style={{ textDecoration: "none" }} to="/weather">
         <div className="navigation-bar__box">
           <h3 className="navigation-bar__title">Weather</h3>
