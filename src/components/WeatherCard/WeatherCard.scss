@@ -4,8 +4,9 @@
     flex-wrap: wrap;
     width: 20rem;
     height: 30rem;
-    border-radius: 5px;
-    background-color: rgba(0, 255, 255, 0.345);
+    border-radius: 27px;
+    box-shadow: 5px 3px 7px;
+    background: linear-gradient(0deg, rgba(182,187,187,1) 20%, rgba(0,244,255,1) 81%, rgba(0,163,255,1) 97%);
     display: grid;
     grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
     grid-template-rows: 1fr 2fr 2fr 1fr 1fr;
@@ -57,5 +58,7 @@
 
     &__img{
         grid-area: i;
+        width: 7rem;
+        height: auto;
     }
 }

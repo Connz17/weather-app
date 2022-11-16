@@ -34,7 +34,7 @@ const LandingPage = ({user, userName, handleSubmit, handleEnter}) => {
           /> <br />
           <label htmlFor="lastName">Last name</label>
           <input type="text" name="lastName" className="landing-page__input" /> 
-          <input type="submit" value="Save" className="landing-page__button"
+          <input type="submit" value="Save User" className="landing-page__button"
           onClick={handleShowButton}/>
         </form> <br />
         { showButton && <Link style={{ textDecoration: "none" }} to="/weather">

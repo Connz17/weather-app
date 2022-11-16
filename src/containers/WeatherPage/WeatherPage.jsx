@@ -68,12 +68,13 @@ return (
         <h1>Good {greetingTime}</h1>
         <h2>{userName}</h2>
     </div> <br />
-    <div>
+    <div className="weather">
+        <h2>The lowdown for todays weather for where you are  is as follows</h2>
         <h3>Country: {weatherData.location.country}</h3>
         <h3>Region: {weatherData.location.region}</h3>
         <h3>City: {weatherData.location.name}</h3> <br />
-        <img src={weatherData.current.condition.icon} alt="current weather" />
         <h3>Current weather is {weatherData.current.condition.text}</h3>
+        <img className="weather__image" src={weatherData.current.condition.icon} alt="current weather" />
         <h3>Actual temperature {weatherData.current.temp_c}&deg;C</h3>
         <h3>Feels like {weatherData.current.feelslike_c}&deg;C</h3>
     </div>

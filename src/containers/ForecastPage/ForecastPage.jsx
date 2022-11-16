@@ -36,13 +36,16 @@ const ForecastPage = ({userLocation, userName, apiKey}) => {
   return (
     <>
     <Nav/>
+    <h2>Please select how many days you want forecast</h2>
     <div>
         <label htmlFor="three">3</label>
-        <input type="radio" name="forecast_range" id="three" value={3} onClick={getForecastValue}/>
+        <input className="input-select" type="radio" name="forecast_range" id="three" value={3} onClick={getForecastValue}/>
         <label htmlFor="five">5</label>
-        <input type="radio" name="forecast_range" id="five" value={5} onClick={getForecastValue}/>
+        <input className="input-select" type="radio" name="forecast_range" id="five" value={5} onClick={getForecastValue}/>
         <label htmlFor="seven">7</label>
-        <input type="radio" name="forecast_range" id="seven" value={7} onClick={getForecastValue}/>
+        <input className="input-select" type="radio" name="forecast_range" id="seven" value={7} onClick={getForecastValue}/>
+        <label htmlFor="ten">10</label>
+        <input className="input-select" type="radio" name="forecast_range" id="ten" value={10} onClick={getForecastValue}/>
     </div> <br />
     <h3>{userName} your forecast for the following {forecastRange} days</h3> <br />
     <div className="card-container">

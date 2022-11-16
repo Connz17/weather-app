@@ -12,6 +12,10 @@
     align-items: center;
     justify-content: space-evenly;
 
+    &:hover{
+        background-color: cornflowerblue;
+    }
+
     &__competition{
         text-decoration: underline;
         text-decoration-color: rgba(240, 230, 140, 0.619);
