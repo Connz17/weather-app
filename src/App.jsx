@@ -1,4 +1,5 @@
 import './App.scss';
+import {apiKey} from "./Config";
 import WeatherPage from './containers/WeatherPage/WeatherPage';
 import LandingPage from './containers/LandingPage/LandingPage';
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
@@ -20,7 +21,6 @@ function App() {
   useEffect(() => {
     getLocation();
 },[])
-
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -61,7 +61,6 @@ function App() {
     }
     });
 } 
-const apiKey = "944306eef47343d792e142554220911";
 
   return (
     <Router>
