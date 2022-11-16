@@ -30,7 +30,7 @@ const WeatherPage = ({userLocation, userName, errorMessage, apiKey}) => {
 
 
     const getWeatherData = async () => {
-    const res = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${userLocation.latitude},${userLocation.longitude}&aqi=no`);
+    const res = await fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${userLocation.latitude},${userLocation.longitude}&aqi=no`);
     const data = await res.json();
     console.log(data);
     setWeatherData(data)

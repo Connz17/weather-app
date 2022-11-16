@@ -10,7 +10,7 @@ const ForecastPage = ({userLocation, userName, errorMessage, apiKey}) => {
     const [forecastRange, setForecastRange] = useState("3")
 
     const getForecastData = async () => {
-        const res = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${userLocation.latitude},${userLocation.longitude}&days=${forecastRange}&aqi=no`);
+        const res = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${userLocation.latitude},${userLocation.longitude}&days=${forecastRange}&aqi=no`);
         const data = await res.json();
         console.log(data.forecast.forecastday);
         setForecastData(data.forecast.forecastday);
