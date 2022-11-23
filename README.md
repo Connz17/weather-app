@@ -33,15 +33,15 @@ End with an example of getting some data out of the system or using it for a lit
 
 ## Usage <a name = "usage"></a>
 
- ### Landing page
+ ### "Landing page"
  
 <img src="./src/assets/images/landing page.png"/>
 
- ### Weather page
+ ### 'Weather page'
  
 <img src="./src/assets/images/Weather page.png"/>
 
- ### Forecast page
+ ### `Forecast page`
  
 <img src="./src/assets/images/forecast page.png"/>
 
